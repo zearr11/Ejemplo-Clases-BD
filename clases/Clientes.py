@@ -4,9 +4,9 @@ class Clientes(Tipo_Doc):
     
     lst = [0]
     
-    def __init__(self, tipo_doc, nombres, apellidos, num_doc, direccion, telefono, email):
+    def __init__(self, nombres, apellidos, tipo_doc, num_doc, direccion, telefono, email):
         super().__init__(tipo_doc)
-        self.__clientes = Clientes.generateCod()
+        self.__idCliente = Clientes.generateCod()
         self.__nombres = nombres
         self.__apellidos = apellidos
         self.__num_doc = num_doc
@@ -22,8 +22,8 @@ class Clientes(Tipo_Doc):
     def Mostrar_TDCliente(self):
         return super().Mostrar_TipoDoc()
     
-    def showElements(self):
-        print(f"Codigo Cliente : {self.__clientes}")
+    def MostrarDTClient(self):
+        print(f"Codigo Cliente : {self.__idCliente}")
         print(f"Nombres : {self.__nombres}")
         print(f"Apellidos : {self.__apellidos}")
         Clientes.Mostrar_TDCliente(self)
