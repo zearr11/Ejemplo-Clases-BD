@@ -19,14 +19,14 @@ class Clientes(Tipo_Doc):
         c = Clientes.lst[0]
         return f"COD_00_{c}"
     
-    def ShowTD_Cliente(self):
-        return super().showTD()
+    def Mostrar_TDCliente(self):
+        return super().Mostrar_TipoDoc()
     
     def showElements(self):
         print(f"Codigo Cliente : {self.__clientes}")
         print(f"Nombres : {self.__nombres}")
         print(f"Apellidos : {self.__apellidos}")
-        Clientes.ShowTD_Cliente(self)
+        Clientes.Mostrar_TDCliente(self)
         print(f"Numero de Documento : {self.__num_doc}")
         print(f"Dirección : {self.__direccion}")
         print(f"Teléfono : {self.__telefono}")
